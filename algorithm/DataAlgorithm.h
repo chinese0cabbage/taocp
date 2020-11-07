@@ -1,8 +1,11 @@
 #pragma once
 
-int FindGreatestCommonDivisor(int num1, int num2) {
-	int b = num1 > num2 ? num1 : num2;
-	int s = num1 < num2 ? num1 : num2;
+//求两个正整数的最大公因数，要求b>s
+int FindGreatestCommonDivisor(int b, int s) {
+	if (b <= 0 || s <= 0)
+		return 0;
+	if (b < s)
+		return FindGreatestCommonDivisor(s, b);
 	int r = b % s;
 	while (r != 0) {
 		b = s;
