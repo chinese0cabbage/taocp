@@ -1,5 +1,7 @@
 #include<iostream>
+#include"algorithm/DataAlgorithm.h"
 
 int main() {
-	std::cout << 5 % 8;
+	int b = 27, s = 3;
+	std::cout << FindGreatestCommonDivisor(s, b);
 }
